@@ -1,0 +1,9 @@
+.flexExpand {
+  flex: 1 1 auto;
+  /* background-color: blueviolet; */
+}
+.flexSpaceBetween {
+  justify-content: flex-start;
+  background-color: #8e7cc3;
+  color: #ffffff;
+}

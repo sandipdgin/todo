@@ -1,0 +1,46 @@
+<div class="add-list-form-wrap">
+  <form [formGroup]="addListForm" (ngSubmit)="addList()">
+    <input
+      type="text"
+      class="add-list-input"
+      name="name"
+      formControlName="name"
+    />
+    <button
+      type="submit"
+      class="add-list-button"
+      [disabled]="!addListForm.valid"
+    >
+      + Add another list
+    </button>
+  </form>
+</div>
+
+<div class="container" cdkDropListGroup>
+  <app-card
+    [todos]="todos.tasks"
+    [title]="todos.name"
+    class="card-list"
+    *ngFor="let todos of list; let ind = index"
+    [listId]="ind"
+    cdkDropList
+    [cdkDropListData]="todos.tasks"
+    (cdkDropListDropped)="drop($event)"
+  ></app-card>
+</div>
+
+<!-- <div cdkDropListGroup>
+  <div class="example-container">
+    <h2>In Progress</h2>
+    <div
+      cdkDropList
+      [cdkDropListData]="inProgress"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)"
+    >
+      <div class="example-box" *ngFor="let item of inProgress" cdkDrag>
+        {{ item }}
+      </div>
+    </div>
+  </div>
+</div> -->

@@ -1,0 +1,44 @@
+.add-list-form-wrap {
+  margin: 2rem;
+}
+.add-list-form-wrap form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+.add-list-input,
+.add-list-button {
+  width: 40%;
+  /* height: 2rem; */
+  /* max-height: 70px; */
+  padding: 0.5rem 0.7rem;
+}
+.add-list-input {
+  border: 1px solid #201c2c;
+  outline: #201c2c;
+}
+.add-list-button {
+  width: 25%;
+  color: #4786f3;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: start;
+  align-items: auto;
+  align-content: flex-start;
+}
+.container:after {
+  display: block;
+  content: "";
+  margin: 10px;
+  flex: 999 999 auto;
+}
+.card-list {
+  flex: 1 0 auto;
+  margin: 10px;
+}
