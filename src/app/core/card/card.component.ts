@@ -92,8 +92,8 @@ export class CardComponent implements OnInit {
   }
 
   deleteTodo(listId, id): void {
-    let r = confirm('Are sure you want to delete this?');
-    if (r == true) {
+    let a = confirm('Are sure you want to delete this task?');
+    if (a === true) {
       console.log('you press ok');
       this.todoService.deleteTodo(listId, id);
     } else {
@@ -101,6 +101,17 @@ export class CardComponent implements OnInit {
       return;
     }
     // console.log('deletetodo', id);
+  }
+
+  deleteList(listId): void {
+    let b = confirm('Are sure you want to delete this task list?');
+    if (b === true) {
+      console.log('you press ok', listId);
+      this.todoService.deletList(listId);
+    } else {
+      console.log('you press cancel');
+      return;
+    }
   }
 
   onAddCardClick(): void {}

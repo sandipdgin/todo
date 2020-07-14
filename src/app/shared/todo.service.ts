@@ -73,6 +73,8 @@ export class TodoService {
 
   deletList(list: Todo): void {
     // console.log('delete list =');
+    console.log(list);
+    this.lists.splice(list, 1);
   }
 
   addTodo(todo): void {
